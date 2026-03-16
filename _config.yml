@@ -1,7 +1,7 @@
 title: QAL ERP Documentation
 description: Official user documentation for QAL ERP — Accounting, Finance, and more.
-baseurl: "/qal-erp-docs"
-url: ""
+baseurl: "/qbs-docs"
+url: "https://quality-feeds-limited.github.io"
 
 # Theme
 remote_theme: just-the-docs/just-the-docs
