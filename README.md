@@ -1,157 +1,66 @@
-# QAL ERP Documentation Site
+# QBS Documentation Site
 
 Built with [Jekyll](https://jekyllrb.com/) and the [Just the Docs](https://github.com/just-the-docs/just-the-docs) theme, deployed via GitHub Pages.
 
 ---
 
-## 🚀 How to Publish to GitHub Pages
+## 🚀 Publishing to GitHub Pages
 
-### Step 1 — Create a GitHub Repository
+**1. Create a GitHub repo** — go to [github.com/new](https://github.com/new), name it `qbs-docs`, set it **Public**.
 
-1. Go to [https://github.com/new](https://github.com/new)
-2. Name the repository: `qal-erp-docs`
-3. Set it to **Public**
-4. Do **NOT** initialise with a README (you already have one)
-5. Click **Create repository**
-
----
-
-### Step 2 — Push This Project to GitHub
-
-Open a terminal in this folder and run:
-
+**2. Push this project:**
 ```bash
 git init
 git add .
-git commit -m "Initial commit — QAL ERP documentation"
+git commit -m "Initial QBS docs"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/qal-erp-docs.git
+git remote add origin https://github.com/YOUR-USERNAME/qbs-docs.git
 git push -u origin main
 ```
 
-Replace `YOUR-USERNAME` with your actual GitHub username.
+**3. Enable GitHub Pages** — repo Settings → Pages → Source: **GitHub Actions** → Save.
 
----
-
-### Step 3 — Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Source**, select **GitHub Actions**
-4. Click **Save**
-
-GitHub will automatically trigger the deploy workflow on your next push.
-
----
-
-### Step 4 — Update the Base URL
-
-Open `_config.yml` and update the `baseurl` and `url` fields:
-
+**4. Update `_config.yml`:**
 ```yaml
-baseurl: "/qal-erp-docs"       # your repo name
+baseurl: "/qbs-docs"
 url: "https://YOUR-USERNAME.github.io"
 ```
 
-Commit and push the change:
-
-```bash
-git add _config.yml
-git commit -m "Update base URL for GitHub Pages"
-git push
-```
+Your site will be live at `https://YOUR-USERNAME.github.io/qbs-docs` within ~2 minutes.
 
 ---
 
-### Step 5 — View Your Site
-
-After the GitHub Actions workflow completes (usually 1–2 minutes), your site will be live at:
+## 📁 Structure
 
 ```
-https://YOUR-USERNAME.github.io/qal-erp-docs
+qbs-docs/
+├── _config.yml
+├── Gemfile
+├── index.md                          # Homepage
+├── .github/workflows/deploy.yml      # Auto-deploy
+├── assets/images/accounting/         # Screenshots
+└── docs/
+    ├── accounting/                   # GL, COA, Voucher Type, Financial Year
+    ├── bank-cash/                    # Bank, Branch, Account, Transactions
+    ├── setup/                        # Division, District, Area, Business Type
+    └── customers/                    # Customer, Supplier
 ```
 
-You can monitor the deployment under the **Actions** tab of your repository.
+## ✏️ Adding New Pages
 
----
-
-## 📁 Project Structure
-
-```
-qal-erp-docs/
-├── _config.yml                          # Jekyll + Just the Docs configuration
-├── Gemfile                              # Ruby dependencies
-├── index.md                             # Homepage
-├── .gitignore
-├── .github/
-│   └── workflows/
-│       └── deploy.yml                   # GitHub Actions auto-deploy
-├── docs/
-│   └── accounting/
-│       ├── index.md                     # Accounting module overview
-│       ├── general-ledger.md
-│       ├── chart-of-accounts.md
-│       ├── chart-of-accounts-type.md    # ✅ Full documentation
-│       ├── voucher-type.md              # ✅ Full documentation
-│       └── financial-year.md
-└── assets/
-    └── images/
-        └── accounting/
-            ├── coa-list.png
-            ├── coa-menu.png
-            ├── coa-button.png
-            ├── coa-create.png
-            ├── coa-edit.png
-            ├── vt-list.png
-            ├── vt-menu.png
-            ├── vt-button.png
-            ├── vt-create.png
-            └── vt-edit.png
-```
-
----
-
-## ✏️ Adding New Documentation Pages
-
-To add a new module page (e.g., "Financial Year"):
-
-1. Create a new `.md` file in `docs/accounting/`
-2. Add the following front matter at the top:
-
+Create a `.md` file in the relevant `docs/` folder with front matter:
 ```yaml
 ---
 layout: default
-title: Financial Year
+title: My New Page
 parent: Accounting
-nav_order: 5
+nav_order: 6
 ---
 ```
-
-3. Write your content in Markdown below.
-4. Commit and push — the site rebuilds automatically.
-
----
 
 ## 🖼️ Adding Screenshots
 
-1. Place your `.png` images in `assets/images/accounting/`
-2. Reference them in Markdown:
-
+Place images in `assets/images/accounting/` and reference:
 ```markdown
 ![Alt text]({{ site.baseurl }}/assets/images/accounting/your-image.png)
-*Figure caption here*
 ```
-
----
-
-## 🏠 Running Locally (Optional)
-
-To preview the site on your machine before pushing:
-
-```bash
-gem install bundler
-bundle install
-bundle exec jekyll serve
-```
-
-Then open `http://localhost:4000/qal-erp-docs` in your browser.
