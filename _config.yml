@@ -2,9 +2,9 @@ remote_theme: https://github.com/just-the-docs/just-the-docs
 # remote_theme: rundocs/jekyll-rtd-theme                                                                                                                                                                 
 plugins:                                                                                                                                                                                                 
 - jekyll-remote-theme # add this line to the plugins list if you already have one                                                                                                                        
-title: Ubuntu Docs                                                                                                                                                                                       
-description: Essential Commands for Linux Ubuntu                                                                                                                                                         
-footer_content: "Copyright &copy; 2023 <a href=\"https://marufhasan.net\">Maruf Hasan</a>"  
+title: QBS Documentation
+description: Official user documentation for QBS — Accounting, Finance, and more.
+footer_content: "Copyright &copy; 2026 QAL ERP. All rights reserved."  
 
 # title: QAL ERP Documentation
 # description: Official user documentation for QAL ERP — Accounting, Finance, and more.
