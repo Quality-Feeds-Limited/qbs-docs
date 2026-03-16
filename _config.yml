@@ -1,44 +1,52 @@
-title: QAL ERP Documentation
-description: Official user documentation for QAL ERP — Accounting, Finance, and more.
-baseurl: "/qbs-docs"
-url: "https://quality-feeds-limited.github.io"
+remote_theme: https://github.com/just-the-docs/just-the-docs                                                                                                                                             
+# remote_theme: rundocs/jekyll-rtd-theme                                                                                                                                                                 
+plugins:                                                                                                                                                                                                 
+- jekyll-remote-theme # add this line to the plugins list if you already have one                                                                                                                        
+title: Ubuntu Docs                                                                                                                                                                                       
+description: Essential Commands for Linux Ubuntu                                                                                                                                                         
+footer_content: "Copyright &copy; 2023 <a href=\"https://marufhasan.net\">Maruf Hasan</a>"  
 
-remote_theme: just-the-docs/just-the-docs
-plugins:
-  - jekyll-remote-theme
-  - jekyll-seo-tag
+# title: QAL ERP Documentation
+# description: Official user documentation for QAL ERP — Accounting, Finance, and more.
+# baseurl: "/qbs-docs"
+# url: "https://quality-feeds-limited.github.io"
 
-color_scheme: default
+# remote_theme: just-the-docs/just-the-docs
+# plugins:
+#   - jekyll-remote-theme
+#   - jekyll-seo-tag
 
-aux_links:
-  "QAL ERP Login":
-    - "https://qbs-test.qfl.com.bd"
-aux_links_new_tab: true
+# color_scheme: default
 
-search_enabled: true
+# aux_links:
+#   "QAL ERP Login":
+#     - "https://qbs-test.qfl.com.bd"
+# aux_links_new_tab: true
 
-footer_content: "Copyright &copy; 2026 QAL ERP. All rights reserved."
+# search_enabled: true
 
-back_to_top: true
-back_to_top_text: "Back to top"
+# footer_content: "Copyright &copy; 2026 QAL ERP. All rights reserved."
 
-heading_anchors: true
+# back_to_top: true
+# back_to_top_text: "Back to top"
 
-nav_sort: order
+# heading_anchors: true
 
-callouts_level: quiet
-callouts:
-  highlight:
-    color: yellow
-  important:
-    title: Important
-    color: blue
-  new:
-    title: New
-    color: green
-  note:
-    title: Note
-    color: purple
-  warning:
-    title: Warning
-    color: red
+# nav_sort: order
+
+# callouts_level: quiet
+# callouts:
+#   highlight:
+#     color: yellow
+#   important:
+#     title: Important
+#     color: blue
+#   new:
+#     title: New
+#     color: green
+#   note:
+#     title: Note
+#     color: purple
+#   warning:
+#     title: Warning
+#     color: red
